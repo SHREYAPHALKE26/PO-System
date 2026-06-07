@@ -1,0 +1,274 @@
+
+
+/* Import Inter font if not already imported globally */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: #FFFFFF;
+  border-right: 1px solid #E0E0E0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Custom Scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #E0E0E0;
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #9E9E9E;
+}
+
+/* ============================================
+   SIDEBAR HEADER
+   ============================================ */
+.sidebar-header {
+  padding: 24px 20px;
+  border-bottom: 1px solid #E0E0E0;
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.sidebar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.sidebar-subtitle {
+  font-size: 0.75rem;
+  color: #9E9E9E;
+  margin: 4px 0 0 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   SIDEBAR NAVIGATION
+   ============================================ */
+.sidebar-nav {
+  flex: 1;
+  padding: 16px 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-menu-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   SIDEBAR LINKS
+   ============================================ */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #212121;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+  position: relative;
+}
+
+.sidebar-link .material-symbols-outlined {
+  font-size: 20px;
+  margin-right: 12px;
+  color: #9E9E9E;
+  transition: color 0.2s ease;
+}
+
+.sidebar-link span:last-child {
+  flex: 1;
+}
+
+/* Hover State */
+.sidebar-link:hover {
+  background-color: #F5F5F5;
+  color: #1E3A8A;
+  padding-left: 24px;
+}
+
+.sidebar-link:hover .material-symbols-outlined {
+  color: #1E3A8A;
+}
+
+/* Active State */
+.sidebar-link.active {
+  background-color: rgba(30, 58, 138, 0.08);
+  color: #1E3A8A;
+  border-left-color: #1E3A8A;
+  font-weight: 600;
+}
+
+.sidebar-link.active .material-symbols-outlined {
+  color: #1E3A8A;
+}
+
+/* ============================================
+   LOGOUT BUTTON
+   ============================================ */
+.sidebar-logout-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 20px;
+  color: #212121;
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-logout-btn .material-symbols-outlined {
+  font-size: 20px;
+  margin-right: 12px;
+  color: #9E9E9E;
+  transition: color 0.2s ease;
+}
+
+.sidebar-logout-btn:hover {
+  background-color: rgba(239, 68, 68, 0.08);
+  color: #DC2626;
+  padding-left: 24px;
+}
+
+.sidebar-logout-btn:hover .material-symbols-outlined {
+  color: #DC2626;
+}
+
+.sidebar-logout-btn:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+.sidebar-divider {
+  height: 1px;
+  background-color: #E0E0E0;
+  margin: 16px 20px;
+  list-style: none;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 240px;
+  }
+
+  .sidebar-logo {
+    font-size: 1.25rem;
+  }
+
+  .sidebar-link,
+  .sidebar-logout-btn {
+    padding: 10px 16px;
+    font-size: 0.8125rem;
+  }
+
+  .sidebar-link:hover,
+  .sidebar-logout-btn:hover {
+    padding-left: 20px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+.sidebar-link:focus-visible,
+.sidebar-logout-btn:focus-visible {
+  outline: 2px solid #1E3A8A;
+  outline-offset: -2px;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.sidebar.animate-in {
+  animation: slideIn 0.3s ease;
+}
+
+/* ============================================
+   BADGE/NOTIFICATION (Optional)
+   ============================================ */
+.sidebar-badge {
+  display: inline-block;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background-color: #1E3A8A;
+  color: #FFFFFF;
+  font-size: 0.625rem;
+  font-weight: 600;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 20px;
+  margin-left: auto;
+}
+
+/* Usage example in JSX:
+<Link to="/approver/dashboard" className="sidebar-link">
+  <span className="material-symbols-outlined">pending_actions</span>
+  <span>Pending Requests</span>
+  <span className="sidebar-badge">5</span>
+</Link>
+*/
