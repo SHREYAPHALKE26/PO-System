@@ -74,17 +74,12 @@ npm start
 
 ---
 
-## Environment Variables
+## Project Demo
 
-Create a `.env` file in backend folder and add:
+🎥 Demo Video:
 
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=database_name
-JWT_SECRET=your_secret
-```
+[Watch Demo Video](./demo/a74c8425-f655-45ec-b9da-4cfbc6b974e8.mp4)
+
 
 ---
 
