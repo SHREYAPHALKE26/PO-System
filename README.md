@@ -74,20 +74,6 @@ npm start
 
 ---
 
-## Environment Variables
-
-Create a `.env` file in backend folder and add:
-
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=database_name
-JWT_SECRET=your_secret
-```
-
----
-
 ## Future Enhancements
 
 * Email Notifications
