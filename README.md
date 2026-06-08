@@ -92,13 +92,13 @@ npm start
 
 ---
 
-## Future Enhancements
+## Additional implemented Features
 
 * Email Notifications
 * PDF Export
 * Vendor Portal
 * Analytics Dashboard
-* Cloud Deployment
+
 
 ---
 
