@@ -16,6 +16,8 @@ The Purchase Order Management System is a web-based procurement automation platf
 The system improves procurement efficiency, transparency, and accountability through role-based access control and automated workflows.
 
 ---
+<img width="1052" height="800" alt="image" src="https://github.com/user-attachments/assets/511a3788-99e2-4898-88f2-3abcb4391321" />
+
 
 ## Features
 
